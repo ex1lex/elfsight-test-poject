@@ -1,0 +1,8 @@
+@media (max-width: 700px) {
+  .dialog__close-button_card {
+    right: 1%;
+    top: 0%;
+    width: 26px;
+    height: 26px;
+  }
+}

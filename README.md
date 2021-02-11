@@ -1,3 +1,3 @@
-# template-react-project
+# elfsight-test-poject
 
-Шаблон реакт проекта подготовленный для деплоя на GitHub Pages
+Тестовое задание для компании Elfsight
