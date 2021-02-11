@@ -7,7 +7,7 @@ import Photos from "./Photos";
 import { Route, Switch, useRouteMatch } from "react-router-dom";
 
 function App() {
-  const projectName = "elfsight-test-poject";
+  const projectName = "/elfsight-test-poject";
   const [users, setUsers] = React.useState([]);
   const [albums, setAlbums] = React.useState([]);
   const [photos, setPhotos] = React.useState([]);
@@ -48,17 +48,17 @@ function App() {
     <>
       <p>text</p>
       <Switch>
-        <Route exact path="/">
+        <Route exact path={`${projectName}/`}>
           <Users users={users} onClickUser={handleUserClick} />
         </Route>
-        <Route path="/albums/:userId">
+        <Route path={`${projectName}/albums/:userId`}>
           <Albums
             albums={albums}
             photos={photos}
             onClickAlbum={handleAlbumClick}
           />
         </Route>
-        <Route path="/photos/:albumId">
+        <Route path={`${projectName}/photos/:albumId`}>
           <Photos
             userId={selectedUser.id}
             photos={photos}
