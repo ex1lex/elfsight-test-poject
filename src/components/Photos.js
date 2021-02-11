@@ -17,7 +17,7 @@ export default function Photos(props) {
 
   return (
     <>
-      <NavLink to="/" className="link link_type_back">
+      <NavLink to={`/albums/${props.userId}`} className="link link_type_back">
         Назад
       </NavLink>
       <ul className="photos">

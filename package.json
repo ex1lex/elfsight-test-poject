@@ -1,15 +1,15 @@
 {
-  "name": "template-react-project",
+  "name": "elfsight-test-poject",
   "version": "0.1.0",
-  "homepage": "https://ex1lex.github.io/template-react-project/",
+  "homepage": "",
   "author": "Alexey Obryadin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ex1lex/template-react-project/issues"
+    "url": "https://github.com/ex1lex/elfsight-test-poject/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ex1lex/template-react-project.git"
+    "url": "git+https://github.com/ex1lex/elfsight-test-poject.git"
   },
   "private": true,
   "dependencies": {

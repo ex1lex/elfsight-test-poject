@@ -4,9 +4,10 @@ import Popup from "./Popup";
 import Users from "./Users";
 import Albums from "./Albums";
 import Photos from "./Photos";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useRouteMatch } from "react-router-dom";
 
 function App() {
+  const projectName = "elfsight-test-poject";
   const [users, setUsers] = React.useState([]);
   const [albums, setAlbums] = React.useState([]);
   const [photos, setPhotos] = React.useState([]);
@@ -41,8 +42,11 @@ function App() {
     setSelectedAlbum({});
   };
 
+  const { path, url } = useRouteMatch();
+
   return (
     <>
+      <p>text</p>
       <Switch>
         <Route exact path="/">
           <Users users={users} onClickUser={handleUserClick} />
@@ -55,7 +59,11 @@ function App() {
           />
         </Route>
         <Route path="/photos/:albumId">
-          <Photos photos={photos} onClickPhoto={handlePhotoClick} />
+          <Photos
+            userId={selectedUser.id}
+            photos={photos}
+            onClickPhoto={handlePhotoClick}
+          />
           <Popup selectedAlbum={selectedAlbum} onClose={closePopup} />
         </Route>
       </Switch>

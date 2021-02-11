@@ -79,6 +79,10 @@
   padding: 20px 20px 100px;
 }
 
+.slick-slide div {
+  text-align: center;
+}
+
 .slick-dots {
   bottom: -80px;
 }
