@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/elfsight-test-poject/static/css/main.d563bf3a.chunk.css",
-    "main.js": "/elfsight-test-poject/static/js/main.8ffcbd7d.chunk.js",
-    "main.js.map": "/elfsight-test-poject/static/js/main.8ffcbd7d.chunk.js.map",
+    "main.js": "/elfsight-test-poject/static/js/main.af05798a.chunk.js",
+    "main.js.map": "/elfsight-test-poject/static/js/main.af05798a.chunk.js.map",
     "runtime-main.js": "/elfsight-test-poject/static/js/runtime-main.9871b6d0.js",
     "runtime-main.js.map": "/elfsight-test-poject/static/js/runtime-main.9871b6d0.js.map",
     "static/css/2.7b4afb6c.chunk.css": "/elfsight-test-poject/static/css/2.7b4afb6c.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.7b4afb6c.chunk.css",
     "static/js/2.b29883f6.chunk.js",
     "static/css/main.d563bf3a.chunk.css",
-    "static/js/main.8ffcbd7d.chunk.js"
+    "static/js/main.af05798a.chunk.js"
   ]
 }
