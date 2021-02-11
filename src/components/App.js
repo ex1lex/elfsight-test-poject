@@ -46,17 +46,17 @@ function App() {
   return (
     <>
       <Switch>
-        <Route exact path={`/`}>
+        <Route exact path="/">
           <Users users={users} onClickUser={handleUserClick} />
         </Route>
-        <Route path={`/albums/:userId`}>
+        <Route path="/albums/:userId">
           <Albums
             albums={albums}
             photos={photos}
             onClickAlbum={handleAlbumClick}
           />
         </Route>
-        <Route path={`/photos/:albumId`}>
+        <Route path="/photos/:albumId">
           <Photos
             userId={selectedUser.id}
             photos={photos}
