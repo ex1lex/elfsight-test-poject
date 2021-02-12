@@ -1,14 +1,11 @@
 import Album from "./Album";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function Albums(props) {
   const { userId } = useParams();
 
   return (
     <>
-      <NavLink to="/" className="link link_type_back">
-        Назад
-      </NavLink>
       <ul className="albums">
         {props.albums.map((item) => {
           const photos = props.photos.filter((photo) => {

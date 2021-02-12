@@ -1,0 +1,28 @@
+.gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0;
+  position: relative;
+}
+
+.gallery__title {
+  font-size: 40px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gallery__link {
+  position: absolute;
+  top: 37px;
+  left: 5%;
+  font-size: 20px;
+  text-decoration: none;
+  background: silver;
+  padding: 5px;
+  border-radius: 7%;
+  color: black;
+}
+
+.gallery__link:hover {
+  text-decoration: underline;
+}

@@ -4,14 +4,13 @@ import Popup from "./Popup";
 import Users from "./Users";
 import Albums from "./Albums";
 import Photos from "./Photos";
-import { Route, Switch, useRouteMatch } from "react-router-dom";
+import { Route, Switch, useRouteMatch, NavLink } from "react-router-dom";
 
 function App() {
   const [users, setUsers] = React.useState([]);
   const [albums, setAlbums] = React.useState([]);
   const [photos, setPhotos] = React.useState([]);
   const [selectedUser, setSelectedUser] = React.useState({});
-  const [selectedAlbums, setSelectedAlbums] = React.useState({});
   const [selectedAlbum, setSelectedAlbum] = React.useState({});
   const [selectedPhotos, setSelectedPhotos] = React.useState({});
 
@@ -33,8 +32,8 @@ function App() {
     setSelectedAlbum(album);
   };
 
-  const handlePhotoClick = (data) => {
-    setSelectedAlbum(data);
+  const handlePhotoClick = (album) => {
+    setSelectedAlbum(album);
   };
 
   const closePopup = () => {
@@ -44,12 +43,17 @@ function App() {
   const { path, url } = useRouteMatch();
 
   return (
-    <>
+    <div className="gallery">
       <Switch>
         <Route exact path="/">
+          <h1 className="gallery__title">Список пользователей</h1>
           <Users users={users} onClickUser={handleUserClick} />
         </Route>
         <Route path="/albums/:userId">
+          <NavLink to="/" className="gallery__link">
+            Назад
+          </NavLink>
+          <h1 className="gallery__title">Список альбомов пользователя</h1>
           <Albums
             albums={albums}
             photos={photos}
@@ -57,15 +61,15 @@ function App() {
           />
         </Route>
         <Route path="/photos/:albumId">
-          <Photos
-            userId={selectedUser.id}
-            photos={photos}
-            onClickPhoto={handlePhotoClick}
-          />
+          <NavLink to={`/albums/${selectedUser.id}`} className="gallery__link">
+            Назад
+          </NavLink>
+          <h1 className="gallery__title">Фотографии</h1>
+          <Photos photos={photos} onClickPhoto={handlePhotoClick} />
           <Popup selectedAlbum={selectedAlbum} onClose={closePopup} />
         </Route>
       </Switch>
-    </>
+    </div>
   );
 }
 

@@ -7,13 +7,15 @@ export default function Album(props) {
 
   return (
     <li className="albums__album">
-      <h1 className="albums__title">{props.album.title}</h1>
+      <h2 className="albums__title">{props.album.title}</h2>
       <p className="albums__count">{props.count} фотографий</p>
-      <div className="albums__overlay" onClick={handleClick}>
-        <NavLink to={`/photos/${props.album.id}`} className="albums__label">
-          Открыть
-        </NavLink>
-      </div>
+      <NavLink
+        to={`/photos/${props.album.id}`}
+        className="albums__overlay"
+        onClick={handleClick}
+      >
+        <p className="albums__label">Открыть</p>
+      </NavLink>
     </li>
   );
 }

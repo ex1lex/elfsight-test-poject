@@ -1,5 +1,5 @@
 import Photo from "./Photo";
-import { useParams, NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function Photos(props) {
   const { albumId } = useParams();
@@ -17,9 +17,6 @@ export default function Photos(props) {
 
   return (
     <>
-      <NavLink to={`/albums/${props.userId}`} className="link link_type_back">
-        Назад
-      </NavLink>
       <ul className="photos">
         {selectedAlbum.map((item, index) => {
           return (

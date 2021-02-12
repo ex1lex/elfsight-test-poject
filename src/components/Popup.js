@@ -13,8 +13,6 @@ export default function Popup(props) {
     adaptiveHeight: true,
   };
 
-  //TODO initialSlide должно получаться из вне - т.к. открыта фотография
-
   const overlayClickHandle = (e) => {
     if (
       e.target.classList.contains("dialog") ||
@@ -34,7 +32,7 @@ export default function Popup(props) {
                 return (
                   <img
                     key={index}
-                    src={item.url}
+                    src={item.thumbnailUrl}
                     alt={item.title}
                     className="dialog__img"
                   />
@@ -44,7 +42,7 @@ export default function Popup(props) {
           </div>
           <button
             type="submit"
-            className="dialog__close-button dialog__close-button_card"
+            className="dialog__close-button"
             onClick={props.onClose}
           ></button>
         </div>
